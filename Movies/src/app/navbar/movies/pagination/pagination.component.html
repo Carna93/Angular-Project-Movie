@@ -1,0 +1,18 @@
+<div class="text-center">
+    <nav class="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a class="btn btn-link" (click)="pageSelected(1)" *ngIf="activePage >1 ">&#171;</a>
+            </li>
+            <li class="page-item">
+                <a class="btn btn-link" (click)="pageSelected(activePage - 1)" *ngIf="activePage >1 ">Previous</a>
+            </li>
+            <li class="page-item">
+                <a class="btn btn-link" (click)="pageSelected(activePage + 1)" *ngIf="activePage < getPages()">Next</a>
+            </li>
+            <li class="page-item">
+                <a class="btn btn-link" (click)="pageSelected(getPages())" *ngIf="activePage < getPages()">&#187;</a>
+            </li>
+        </ul>
+    </nav>
+</div>
